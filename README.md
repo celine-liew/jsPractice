@@ -1,5 +1,5 @@
 # jsPractice
-Practice codes for javaScript concepts.
+Practice codes for JavaScript concepts.
 
 
 # Click to see Sandboxes for the codes:
