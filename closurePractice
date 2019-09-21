@@ -1,0 +1,44 @@
+// /* function returning a function that adds up the number */    
+
+const addFunc = (num) => {
+  let addNum = num;
+  return function(num) {
+    return addNum + num;
+  }
+};
+
+
+const add10 = addFunc(10);
+console.log(add10(4));
+console.log(add10(10));
+
+
+// /* make counter */
+
+const makeCounter = (num) => {
+  let counter = num;
+  return () => {
+    return ++counter;
+  }
+}
+
+const countFromOne = makeCounter(1);
+console.log(countFromOne());
+console.log(countFromOne());
+
+/* make counter that have makeCounter.increase / .decrease*/
+
+const Counter = (num) => {
+  let counter = num;
+  return {
+    increase: () => ++counter,
+    decrease: () => --counter
+  }
+}
+
+const countUpDown = Counter(1);
+console.log(countUpDown);
+console.log(countUpDown.increase());
+console.log(countUpDown.increase());
+
+
