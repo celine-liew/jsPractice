@@ -32,8 +32,8 @@ console.log(countFromOne());
 const Counter = (num) => {
   let counter = num;
   return () => ({
-    increase: () => ++counter;
-    decrease: () => --counter;
+    increase: () => ++counter,
+    decrease: () => --counter
   })
 }
 
