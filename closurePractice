@@ -31,7 +31,7 @@ console.log(countFromOne());
 
 const Counter = (num) => {
   let counter = num;
-  return () => ({
+  return () => ({             // ( is implicit return
     increase: () => ++counter,
     decrease: () => --counter
   })
@@ -48,7 +48,7 @@ console.log(countUpDown.increase());
 
 const Counter = (num) => {
   let counter = num;
-  return {
+  return {                      // instead of function, return object
     increase: () => ++counter,
     decrease: () => --counter
   }
