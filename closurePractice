@@ -37,7 +37,7 @@ const Counter = (num) => {
   })
 }
 
-const countUpDown = Counter(1);
+const countUpDown = Counter(1)(); // --> note, need this extra ()!
 console.log(countUpDown);
 console.log(countUpDown.increase());
 console.log(countUpDown.increase());
