@@ -62,3 +62,12 @@ debounced2(22);
 debounced2(22);
 debounced3(333);
 debounced3(333);
+
+/* prints the following :
+some time passed first...
+some time passed...
+second second!!!!22
+hello there!!!!
+second second!!!!333
+second second!!!!22
+*/
