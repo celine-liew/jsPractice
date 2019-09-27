@@ -1,3 +1,4 @@
+
 const debounce = (func, wait = 100) => {
   let timeout;
   return (...args) => {
@@ -11,9 +12,9 @@ const debounce = (func, wait = 100) => {
   
 }
 
-const sayHi = debounce(() => {
+const sayHi = () => {
   console.log('hello there!!!!');
-});
+};
 
 const debounced = debounce(sayHi, 500);
 
@@ -51,17 +52,16 @@ const debounceImmediate = (func, wait = 100, immediate = false) => {
   
 }
 
-const efficient = debounceImmediate((args) => {
+const efficient = (args) => {
   console.log('second second!!!!' + args);
-});
+};
 
-const debounced2 = debounceImmediate(efficient, 900, true);
 const debounced3 = debounceImmediate(efficient, 500);
 
-debounced2(22);
-debounced2(22);
-debounced3(333);
-debounced3(333);
+efficient(22);
+efficient(22);
+efficient(333);
+efficient(333);
 
 /* prints the following :
 some time passed first...
