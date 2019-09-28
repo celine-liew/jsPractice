@@ -9,8 +9,7 @@ const flattenArray = (arr) => {
   
   while(stack.length){
     if (!Array.isArray(stack[0])){
-      result.push(stack[0])
-      stack.shift();
+      result.push(stack.shift());
       continue;
     }
     if (stack[0].length) {
