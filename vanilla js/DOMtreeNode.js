@@ -20,6 +20,7 @@ const findNode = (rootA, rootB, targetNode) => {
 // method 2: travel up the node and find the path (no need to traverse whole tree)
 const getPathIndex = (node) => {
   return Array.from(node.parentNode.childNodes).indexOf(node)
+    //Array.prototype.indexOf.call(node.parentNode.childNodes, node);
 }
 
 
