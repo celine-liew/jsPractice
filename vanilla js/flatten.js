@@ -14,8 +14,6 @@ const flattenArray = (arr) => {
     }
     if (stack[0].length) {
       stack.unshift(stack[0].shift());
-      console.log("start")
-      console.log(stack)
     } else
       stack.shift();
   }
