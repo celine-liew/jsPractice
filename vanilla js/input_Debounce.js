@@ -25,3 +25,9 @@ textInput.onkeyup = () => {
   };
 
 const keyupDebounced = debounce(textInput.onkeyup, 500, true)
+
+
+// helper
+const myHandler = (event) => // do something with the event
+const dHandler = debounced(200, myHandler);
+domNode.addEventListener("input", dHandler);
