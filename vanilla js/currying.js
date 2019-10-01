@@ -39,3 +39,15 @@ console.log(addMore(2)(3)(4)(5).valueOf())
 
 
 /* adding both above to work??? */
+
+unction add(a,b){
+        var ddd = function (b){return a+b;};
+        if(typeof b =='undefined'){
+            return ddd;
+        }else{
+            return ddd(b);
+        }
+    }
+
+add(2)(3) // 5
+add(2,3) // 5
