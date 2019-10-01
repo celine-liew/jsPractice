@@ -40,9 +40,9 @@ console.log(addMore(2)(3)(4)(5).valueOf())
 
 /* adding both above to work??? */
 
-unction add(a,b){
+function add(a,b){
         var ddd = function (b){return a+b;};
-        if(typeof b =='undefined'){
+        if(typeof b =='undefined'){ // !b
             return ddd;
         }else{
             return ddd(b);
