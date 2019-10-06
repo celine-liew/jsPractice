@@ -32,3 +32,27 @@ const myHandler = (event) => // do something with the event
 const dHandler = debounced(myHandler, 200);
 element.addEventListener("input", dHandler);
 // any HTML DOM Events
+
+
+// second method
+let timeout;
+
+const textInput = document.querySelector('input');
+
+
+function callServer() {
+  // call server here.
+  console.log("calling server here);
+}
+
+function handleKeyDown() {
+  if (timeout){
+    clearTimeout(timeout)
+  }
+  return timeout = setTimeout(callServer, 400)
+}
+  
+
+textInput.addEventListener('keydown', handleKeyDown);
+  
+  
