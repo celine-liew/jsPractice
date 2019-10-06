@@ -72,7 +72,7 @@ second second!!!!333
 second second!!!!22
 */
 
-    function debounce(func, wait = 20, immediate = true) {
+ function debounce(func, wait = 20, immediate = true) {
       var timeout;
       return function() {
         var context = this, args = arguments;
@@ -85,4 +85,45 @@ second second!!!!22
         timeout = setTimeout(later, wait);
         if (callNow) func.apply(context, args);
       };
+    // window + self-invoking
+      
+( (window) => {
+let timeout;
+
+window.handleKeyDown = () => {
+    // let timeout;
+    
+  // return () => {
+    if (timeout){
+      clearTimeout(timeout)
     }
+    return timeout = setTimeout(callServer, 400);
+  // }
+}
+
+
+function callServer(){
+  console.log("calling server here");
+}
+
+})(window)
+
+function test(para1) {
+  console.log(para1);
+}
+
+
+window.onload = handleKeyDown()
+
+let count = 0;
+console.log(count++)
+handleKeyDown();
+handleKeyDown();
+console.log(count++)
+handleKeyDown();
+console.log(count++)
+handleKeyDown();
+console.log(count++)
+handleKeyDown();
+console.log(count++)
+handleKeyDown();
