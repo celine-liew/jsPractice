@@ -112,9 +112,6 @@ function test(para1) {
   console.log(para1);
 }
 
-
-window.onload = handleKeyDown()
-
 let count = 0;
 console.log(count++)
 handleKeyDown();
@@ -127,3 +124,10 @@ console.log(count++)
 handleKeyDown();
 console.log(count++)
 handleKeyDown();
+   
+// prints the following:
+//  1
+//  2
+//  3
+//  4
+// calling server here
