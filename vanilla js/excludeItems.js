@@ -13,12 +13,14 @@ const excludes = [
 ]
 
 function excludeItems(items, excludes) {
+  let ans = Array.from(items);
   excludes.forEach (excluding => {
-    items = items.filter( item => item[excluding.k] !== excluding.v);
+    ans = ans.filter( item => item[excluding.k] !== excluding.v);
   })
   
-  return items;
+  return ans;
 }
+
 
 
 console.log(excludeItems(items,excludes));
