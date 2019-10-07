@@ -51,6 +51,15 @@ function excludeItems2(items, excludes){
   })
    // console.log(cat)
 
+  /* data structure looks like this:
+cat = {
+      color: { red : [],
+              blue: [] },
+      type: { phone: [],
+              tv: [] }
+      }
+*/
+
   let excludedItems = [];
 
   excludes.forEach (ex => {  // O(m) 
