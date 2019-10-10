@@ -25,15 +25,23 @@ console.log(flattenArray([1,2,[3,4]]))
 console.log(flattenArray([1,2,[3],[4,[5]]]))
 
 /*recursive*/
-
-
-const flatten = (elem, result) => {
-  if (!Array.isArray(elem)){
-    result.push(elem);
-  }else {
-    for (let i = 0; i<elem.length; i++){
-      flatten(elem[i],result)
+const flattenArray = (arr) => {
+  let result = [];
+  
+  const flatten = (elem) => {
+    if (!Array.isArray(elem)){
+      result.push(elem);
+    }else {
+      for (let i = 0; i<elem.length; i++){
+        flatten(elem[i])
+      }
     }
   }
   
+    
+  flatten(arr);
+  
+  return result
+  
 }
+console.log(flattenArray([1,2,[3,"string"]]))
