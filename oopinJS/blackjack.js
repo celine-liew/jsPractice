@@ -207,6 +207,7 @@ class Game {
     const dealScore = players[0].score;
     for (let player in players){
      let score = players[player].score;
+      console.log(players[player].hand)
       if (player == 0) {
         console.log("Dealer score: " + score);
         continue;
