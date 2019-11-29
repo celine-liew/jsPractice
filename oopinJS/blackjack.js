@@ -215,12 +215,14 @@ class Game {
       
      if ((score > dealScore || dealScore > 21) && score <= 21) {
       console.log("congrats, you win Dealer!")
-     } if ((score < dealScore && dealScore <=21) || score > 21){
+     } else if ((score < dealScore && dealScore <=21) || score > 21){
        console.log("dealer win!")
       } else {
         console.log("draw with dealer!");
       }
    }
+    console.log("good game!!!")
+    process.exit(0);
   }
  
   
