@@ -193,6 +193,7 @@ class Game {
     const dealer = players[0];
     console.log("dealer playing...")
     dealer.checkScore();
+    this.revealDealerLast();
     if (dealer.score < 17){
       dealer.addCard(deck.deal());
       this.dealerPlay();
